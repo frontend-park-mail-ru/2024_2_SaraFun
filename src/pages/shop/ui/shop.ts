@@ -69,7 +69,7 @@ export class ShopPage {
       this.openTopupModal();
     });
 
-    const closeButton = document.querySelector('.modal .close') as HTMLElement;
+    const closeButton = document.querySelector('.modal .close-modal') as HTMLElement;
     closeButton.addEventListener('click', () => {
       this.closeTopupModal();
     });
