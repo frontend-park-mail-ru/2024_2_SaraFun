@@ -76,13 +76,15 @@ export default class Navbar {
 		const avatarContainer = document.querySelector('.user-avatar') as HTMLElement; 
     	const popup = document.querySelector('.user-balance-popup') as HTMLElement
 	
-		avatarContainer.addEventListener('mouseenter', () => {
-			popup.style.display = 'block'; 
-		});
-	
-		avatarContainer.addEventListener('mouseleave', () => {
-			popup.style.display = 'none'; 
-		});
+		if (window.innerWidth > 768) {
+			avatarContainer.addEventListener('mouseenter', () => {
+				popup.style.display = 'block'; 
+			});
+		
+			avatarContainer.addEventListener('mouseleave', () => {
+				popup.style.display = 'none'; 
+			});
+		}
 	}
 	
 	createUserBalancePopup(balance: number, dailyLikes: number, purchasedLikes: number): void {
