@@ -2,19 +2,19 @@ mixin password-change
     .password-change-section
         h2 Смена пароля
         .field
-            | Старый пароль:
+            | Старый пароль
             div(class="password__wrapper")
                 input(type="password" class='input' id="OldPassword" name="old-password" required autocomplete="current-password" placeholder="Введите старый пароль")
                 img(class="password__icon" src='/img/eye-x.svg')
             p.error#old-password-error(style='display:none') Неправильный старый пароль.
         .field
-            | Новый пароль:
+            | Новый пароль
             div(class="password__wrapper")
                 input(type="password" class='input' id="NewPassword" name="new-password" required autocomplete="new-password" placeholder="Введите новый пароль")
                 img(class="password__icon" src='/img/eye-x.svg')
             p.error#new-password-error(style='display:none') Новый пароль не удовлетворяет условиям.
         .field
-            | Повторите новый пароль:
+            | Повторите новый пароль
             div(class="password__wrapper")
                 input(type="password" class='input' id="RepeatNewPassword" name="repeat-new-password" required autocomplete="new-password" placeholder="Повторите пароль")
                 img(class="password__icon" src='/img/eye-x.svg')
