@@ -71,10 +71,11 @@
 
 @media (max-width: 450px) { 
     .shop-container {
-    .product-card {
-        width: 100%; 
+        width: 90%;
+        .product-card {
+            width: 100%; 
+        }
     }
-}
 }
 
 .topup-button {
