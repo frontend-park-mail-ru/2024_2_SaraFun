@@ -22,9 +22,6 @@ export function openReportModal(userId: number): void {
       notificationManager.addNotification('Ошибка при отправке жалобы. Попробуйте позже.', 'fail');
     }
   }
-  
-  //const modalHTML = reportModalTemplate();
-  //document.body.insertAdjacentHTML('beforeend', modalHTML);
 
   const modal = document.getElementById('reportModal') as HTMLElement;
   modal.style.display = 'flex';
@@ -32,7 +29,6 @@ export function openReportModal(userId: number): void {
   
   closeModalButton.addEventListener('click', () => {
     modal.style.display = 'none';
-    //modal.remove();
   });
 
   const commentTextarea = document.getElementById('comment') as HTMLTextAreaElement;
@@ -49,7 +45,6 @@ export function openReportModal(userId: number): void {
     const comment = (document.getElementById('comment') as HTMLTextAreaElement).value;
 
     await submitReport(userId, reason, comment);
-    //modal.style.display = 'none';
     modal.remove(); 
   });
 }
