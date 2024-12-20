@@ -36,6 +36,7 @@ export function initCards(tinderContainer: HTMLElement): void {
         if ((event.target as HTMLElement).tagName === 'BUTTON') {
             return;
         }
+        console.log((event.target as HTMLElement).tagName);
         isDragging = true;
         startX = event.type === 'touchstart' ? (event as TouchEvent).touches[0].clientX : (event as MouseEvent).clientX;
         startY = event.type === 'touchstart' ? (event as TouchEvent).touches[0].clientY : (event as MouseEvent).clientY;
