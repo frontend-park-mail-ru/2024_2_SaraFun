@@ -27,6 +27,7 @@ export function openReportModal(userId: number): void {
   document.body.insertAdjacentHTML('beforeend', modalHTML);
 
   const modal = document.getElementById('reportModal') as HTMLElement;
+  console.log(modal);
   modal.style.display = 'flex';
   const closeModalButton = modal.querySelector('.close-modal') as HTMLElement;
   
