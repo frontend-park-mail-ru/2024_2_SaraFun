@@ -23,16 +23,16 @@ export function openReportModal(userId: number): void {
     }
   }
   
-  const modalHTML = reportModalTemplate();
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  //const modalHTML = reportModalTemplate();
+  //document.body.insertAdjacentHTML('beforeend', modalHTML);
 
   const modal = document.getElementById('reportModal') as HTMLElement;
-  console.log(modal);
   modal.style.display = 'flex';
   const closeModalButton = modal.querySelector('.close-modal') as HTMLElement;
   
   closeModalButton.addEventListener('click', () => {
-    modal.remove();
+    modal.style.display = 'none';
+    //modal.remove();
   });
 
   const commentTextarea = document.getElementById('comment') as HTMLTextAreaElement;
@@ -49,7 +49,7 @@ export function openReportModal(userId: number): void {
     const comment = (document.getElementById('comment') as HTMLTextAreaElement).value;
 
     await submitReport(userId, reason, comment);
-    
-    modal.remove(); 
+    modal.style.display = 'none';
+    //modal.remove(); 
   });
 }
