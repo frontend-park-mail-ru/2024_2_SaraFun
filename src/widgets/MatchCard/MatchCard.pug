@@ -7,19 +7,12 @@ mixin getAgeSuffix(username, age)
   - let suffix = 'лет';
   - if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
     - suffix = 'лет';
+  - } else if (lastDigit === 1) {
+    - suffix = 'год';
+  - } else if (lastDigit >= 2 && lastDigit <= 4) {
+    - suffix = 'года';
   - } else {
-    - switch (lastDigit) {
-      - case 1:
-        - suffix = 'год';
-        - break;
-      - case 2:
-      - case 3:
-      - case 4:
-        - suffix = 'года';
-        - break;
-      - default:
-        - suffix = 'лет';
-    - }
+    - suffix = 'лет';
   - }
   = ` ${username}, ${age} ${suffix}`
 
@@ -32,6 +25,8 @@ mixin matchCard(user)
         img(class="img image-section__img_static" src="/img/image.svg" alt="Image" draggable="false")
     +textButton('Перейти в чат', 'match-card__button')
     if (user.profile.first_name == null || user.profile.first_name == '-')
-      h3.match-card__title !{+getAgeSuffix(user.username, user.profile.age)}
+      h3.match-card__title
+        +getAgeSuffix(user.username, user.profile.age)
     else 
-      h3.match-card__title !{+getAgeSuffix(user.profile.first_name, user.profile.age)}
+      h3.match-card__title
+        +getAgeSuffix(user.profile.first_name, user.profile.age)
