@@ -5,12 +5,12 @@
     justify-content: center;
 
     .profile-card {
-        padding: 30px;
+        padding: 20px;
         width: 70%;
         min-width: 400px;
         margin-top: 20px;
         background: var(--white1);
-        border-radius: 25px;
+        border-radius: 20px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
@@ -213,21 +213,21 @@
 .button-wrapper {
     display: flex;
     align-items: center;
+    gap: 10px;
     flex-direction: column; 
   
     button {
-        padding: 10px 20px; 
-        width: 300px;
-        height: 40px;
+        padding: 12px; 
+        width: 100%;
         border: none; 
-        border-radius: 8px;
+        border-radius: 6px;
         cursor: pointer; 
-        font-size: 16px; 
-        margin-bottom: 5px;
+        font-size: 16px;
 
         &.new-password {
             background-color: var(--secondary); 
             color: white;
+            font-family: 'Rubik';
             &:hover {
               background-color: var(--success); 
             }
@@ -237,6 +237,7 @@
           background-color: rgb(204, 204, 204); 
           color: white; 
           transition: background-color 0.3s; 
+          font-family: 'Rubik';
       
           &:hover {
             background-color: #ff9696; 
@@ -246,6 +247,7 @@
         &.save-settings {
           background-color: var(--secondary); 
           color: white;
+          font-family: 'Rubik';
           &:hover {
             background-color: var(--success); 
           }
@@ -254,6 +256,7 @@
         &.cancel-settings {
             background-color: rgb(180, 179, 179); 
             color: rgb(89, 88, 88);
+            font-family: 'Rubik';
 
             &:hover {
                 background-color: var(--red1); 
