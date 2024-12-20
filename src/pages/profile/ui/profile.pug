@@ -60,10 +60,10 @@ div.profile
               img(src=imagesURLs[0]).info-avatar__image
           | #{username}
         .info-section
-          p Имя: #{first_name}
+          p Имя: #{first_name || '—'}
           p Пол: #{gender === 'male' ? 'Мужской' : 'Женский'}
           p Дата рождения: #{birth_date}
-          p Цель: #{target}
+          p Цель: #{target || '—'}
           p О себе: #{about || '—'}
 
       div
