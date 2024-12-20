@@ -139,11 +139,11 @@ export default class Navbar {
 			});
 		}
 
+		const avatarContainer = document.querySelector('.user-avatar') as HTMLElement; 
 		const avatarImage = document.querySelector('.user-avatar__image');
-		if (avatarImage) {
-			avatarImage.addEventListener('click', (event) => {
+		if (avatarImage && avatarContainer) {
+			avatarContainer.addEventListener('click', (event) => {
 				event.preventDefault();
-				const path = logoLink.getAttribute('href');
 				this.parent.navigateTo('/profile');
 			});
 		}
