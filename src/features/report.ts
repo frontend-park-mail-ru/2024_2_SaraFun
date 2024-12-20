@@ -49,7 +49,7 @@ export function openReportModal(userId: number): void {
     const comment = (document.getElementById('comment') as HTMLTextAreaElement).value;
 
     await submitReport(userId, reason, comment);
-    modal.style.display = 'none';
-    //modal.remove(); 
+    //modal.style.display = 'none';
+    modal.remove(); 
   });
 }
