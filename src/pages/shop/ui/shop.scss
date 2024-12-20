@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    position: relative;
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -19,8 +18,8 @@
     }
 
     .product-card {
+        min-width: 160px;
         align-items: center;
-        position: relative;
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 15px;
@@ -30,6 +29,7 @@
         transition: transform 0.2s;
         display: flex;
         flex-direction: column;
+        gap: 10px;
 
         &:nth-child(3n) {
             margin-right: 0;
@@ -45,29 +45,9 @@
             border-radius: 5px;
         }
 
-        h2 {
-            font-size: 18px;
-            margin: 10px 0; 
-            height: auto;
-            overflow: hidden; 
-            text-overflow: ellipsis; 
-        }
-
         .description {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 10px; 
-            overflow: hidden; 
-            display: block; 
-            line-height: 1.4; 
+            color: var(--grey2);
             text-align: center;
-        }
-
-        .price {
-            font-size: 16px;
-            color: #000;
-            margin-top: auto; 
-            margin-bottom: 10px;
         }
 
         .buy-button {
@@ -98,9 +78,6 @@
 }
 
 .topup-button {
-    position: absolute; 
-    top: 20px; 
-    right: 20px; 
     background-color: #007bff; 
     color: white; 
     border: none; 
