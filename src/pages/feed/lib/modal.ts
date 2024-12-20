@@ -32,6 +32,7 @@ export function openNotificationModal(parent: any): void {
         event.preventDefault();
         const url = new URL((event.target as HTMLAnchorElement).href);
         const path = url.pathname;
+        closeModal();
         parent.parent.navigateTo(path);
     });
 }
