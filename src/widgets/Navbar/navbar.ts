@@ -2,6 +2,7 @@ import { logout } from './api/logout';
 import {getProfile} from "../../pages/profile/api/getProfile";
 import { Router } from '../../app/Router';
 import template from './ui/Navbar.pug';
+import { getRubleSuffix } from '../../shared/utils/rublesSuffix';
 
 /**
  * Class representing the navigation bar.
@@ -87,8 +88,9 @@ export default class Navbar {
 	createUserBalancePopup(balance: number, dailyLikes: number, purchasedLikes: number): void {
 		const popup = document.querySelector('.user-balance-popup');
 		if (popup) {
+			const suffix = getRubleSuffix(balance);
 			popup.innerHTML = `
-				<p>Баланс: ${balance}</p>
+				<p>Баланс: ${balance} ${suffix}</p>
 				<p>Бесплатные реакции на сегодня: ${dailyLikes}</p>
 				<p>Купленные реакции: ${purchasedLikes}</p>`
 			;
