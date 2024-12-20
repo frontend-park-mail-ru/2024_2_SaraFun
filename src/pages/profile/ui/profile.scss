@@ -188,11 +188,12 @@
     select,
     textarea {
         margin-left: 0; 
-        border-radius: 5px;
-        border: 1px solid #ccc;
+        border-radius: 6px;
+        border: 1px solid var(--grey1);
         width: 100%; 
         resize: vertical; 
-        padding: 5px;
+        padding: 12px;
+        font-family: 'Rubik';
         min-height: 50px; /* Задайте минимальную высоту по вашему усмотрению */
     }
     textarea {
