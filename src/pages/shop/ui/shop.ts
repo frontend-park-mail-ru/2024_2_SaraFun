@@ -89,7 +89,7 @@ export class ShopPage {
 
   private openTopupModal(): void {
     const modal = document.getElementById('topupModal') as HTMLElement;
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
   }
 
   private closeTopupModal(): void {
