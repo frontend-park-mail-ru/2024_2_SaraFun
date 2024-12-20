@@ -57,10 +57,10 @@ export class FeedPage {
 		});
 
 		addCarousel(allCards, users);
-		initCards(tinderContainer);
+		initCards(tinderContainer, this);
   
-		let nopeListener = createButtonListener(false, tinderContainer);
-		let loveListener = createButtonListener(true, tinderContainer);
+		let nopeListener = createButtonListener(false, tinderContainer, this);
+		let loveListener = createButtonListener(true, tinderContainer, this);
 		
 		nope.addEventListener('click', nopeListener);
 		love.addEventListener('click', loveListener);

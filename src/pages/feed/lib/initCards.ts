@@ -2,7 +2,7 @@ import { putLikeOrDislike } from '../api/putLikeOrDislike';
 import { openReportModal } from '../../../features/report';
 import { openNotificationModal } from './modal';
 
-export function initCards(tinderContainer: HTMLElement): void { 
+export function initCards(tinderContainer: HTMLElement, parent: any): void { 
     let newCards = document.querySelectorAll('.tinder__card:not(.removed)') as NodeListOf<HTMLElement>;
 
     const messageForm = document.querySelector('.form.message-form.message-form--feed') as HTMLElement;
@@ -112,14 +112,14 @@ export function initCards(tinderContainer: HTMLElement): void {
 
             let response = await putLikeOrDislike(love, parseInt(userId));
             if ((response as string).trim() === 'у вас нет лайков') {
-                openNotificationModal();
+                openNotificationModal(parent);
                 firstCard.style.transform = '';
                 return;
             }
 
             firstCard.classList.toggle('removed', !keep);
 
-            initCards(tinderContainer);
+            initCards(tinderContainer, parent);
         }
     }
 
@@ -146,7 +146,7 @@ export function initCards(tinderContainer: HTMLElement): void {
 
         setTimeout(() => {
             firstCard.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
-            initCards(tinderContainer);
+            initCards(tinderContainer, parent);
         }, 500);
         reportForm.remove();
     });
