@@ -7,15 +7,16 @@
     outline: none;
     border: 1px solid var(--grey1); 
     padding: 12px; 
+    font-family: 'Rubik';
     transition: border-color 0.3s ease, background-color 0.3s ease; 
 }
 
 .date-input:focus {
-    border-color: var(--primary); 
+    border-color: var(--secondary); 
     background-color: var(--light-grey); 
 }
 
 .date-input:hover {
-    border-color: var(--primary); 
+    border-color: var(--secondary); 
     background-color: var(--light-grey); 
 }
