@@ -64,7 +64,7 @@ div.profile
           p Пол: #{gender === 'male' ? 'Мужской' : 'Женский'}
           p Дата рождения: #{birth_date}
           p Цель: #{target}
-          p О себе: #{about}
+          p О себе: #{about || '—'}
 
       div
         h3 Баланс
