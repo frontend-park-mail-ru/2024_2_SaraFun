@@ -136,12 +136,14 @@
         .upload-button {
             margin-top: 10px; 
             display: fix;
-            padding: 10px 20px;
+            padding: 12px;
             background-color: var(--secondary);
             color: white;
             border: none; 
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
+            font-family: 'Rubik';
+            font-size: 1em;
 
             &:hover {
                 background-color: var(--success);
