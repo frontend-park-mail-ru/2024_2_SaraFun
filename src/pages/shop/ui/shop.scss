@@ -19,6 +19,7 @@
     }
 
     .product-card {
+        align-items: center;
         position: relative;
         background-color: #fff;
         border: 1px solid #ddd;
@@ -59,6 +60,7 @@
             overflow: hidden; 
             display: block; 
             line-height: 1.4; 
+            text-align: center;
         }
 
         .price {
@@ -72,9 +74,11 @@
             background-color: var(--secondary); 
             color: white;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 12px;
+            font-size: 1em;
+            border-radius: 6px;
             cursor: pointer;
+            width: 100%;
             font-family: 'Rubik';
             transition: background-color 0.3s;
 
@@ -100,9 +104,11 @@
     background-color: #007bff; 
     color: white; 
     border: none; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
+    padding: 12px; 
+    border-radius: 6px; 
+    font-size: 1em;
     cursor: pointer; 
+    font-family: 'Rubik';
     transition: background-color 0.3s; 
 }
 
