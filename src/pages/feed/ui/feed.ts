@@ -7,6 +7,7 @@ import { addCarousel } from '../../../shared/lib/carousel/addCarousel';
 import { createButtonListener } from '../lib/createButtonListener';
 import { notificationManager } from '../../../widgets/Notification/notification';
 import { WsMessage } from '../../../entities/WsMessage/WsMessage';
+import Navbar from '../../../widgets/Navbar/navbar';
 
 
 /**
@@ -14,6 +15,7 @@ import { WsMessage } from '../../../entities/WsMessage/WsMessage';
  */
 export class FeedPage {
 	private parent: Router;
+	private navbar: Navbar;
 	/**
      * Creates an instance of FeedPage.
      * @param {Object} parent - The parent object containing the root element.
@@ -21,6 +23,8 @@ export class FeedPage {
 	constructor(parent: Router) {
 		this.parent = parent;
 		this.parent.root.innerHTML = '';
+		this.navbar = new Navbar(this.parent);
+		
 		this.render();
 	}
 
