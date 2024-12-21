@@ -108,7 +108,7 @@ export function initCards(tinderContainer: HTMLElement, parent: any): void {
             firstCard.style.transform = 'translate(' + toX + 'px, ' + toY + 'px) rotate(' + rotate + 'deg)';
 
             let love = deltaX > 0;
-            let username = firstCard.getAttribute('data-item-id');
+            let username = firstCard.getAttribute('data-item-username');
 
             let response = await putLikeOrDislike(love, username);
             if ((response as string).trim() === 'у вас нет лайков') {
