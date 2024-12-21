@@ -63,8 +63,15 @@ export class FeedPage {
 		addCarousel(allCards, users);
 		initCards(tinderContainer, this);
   
-		let nopeListener = createButtonListener(false, tinderContainer, this);
-		let loveListener = createButtonListener(true, tinderContainer, this);
+		let nopeListener = async () => {
+			await createButtonListener(false, tinderContainer, this); 
+			await this.navbar.getUserInfo();
+		};
+		let loveListener = async () => {
+			await createButtonListener(true, tinderContainer, this); 
+			await this.navbar.getUserInfo(); 
+		};
+		 
 		
 		nope.addEventListener('click', nopeListener);
 		love.addEventListener('click', loveListener);
