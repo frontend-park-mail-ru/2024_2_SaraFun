@@ -63,11 +63,14 @@ export class FeedPage {
 		addCarousel(allCards, users);
 		initCards(tinderContainer, this);
   
-		let nopeListener = createButtonListener(false, tinderContainer, this);
+		let nopeListener = async () => {
+			createButtonListener(false, tinderContainer, this);
+			await this.navbar.getUserInfo(); 
+		};
 		  
 		let loveListener = async () => {
-			await createButtonListener(true, tinderContainer, this)(event); // Обработка лайка
-			await this.navbar.getUserInfo(); // Обновление информации о пользователе
+			await createButtonListener(true, tinderContainer, this)(event);
+			await this.navbar.getUserInfo(); 
 		  };
 		  
 		  
