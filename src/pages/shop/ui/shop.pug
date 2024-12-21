@@ -1,15 +1,16 @@
-.shop-container
-    .card-header
-        h1 Магазин
-        button.topup-button() Пополнить счет
-    .product-list
-        each product in products
-            .product-card
-                .image-container
-                    img(src=`https://spark-it.site/${product.imageURL}`, alt=product.name)
-                h2= product.name
-                p.description #{product.description} 
-                p.price Цена: #{product.price}₽
-                button.buy-button(data-product-name=product.name, data-product-price=product.price) Купить
+.shop
+    .shop-container
+        .card-header
+            h1 Магазин
+            button.topup-button() Пополнить счет
+        .product-list
+            each product in products
+                .product-card
+                    .image-container
+                        img(src=`https://spark-it.site/${product.imageURL}`, alt=product.name)
+                    h2= product.name
+                    p.description #{product.description} 
+                    p.price Цена: #{product.price}₽
+                    button.buy-button(data-product-name=product.name, data-product-price=product.price) Купить
 
-include ../../../widgets/Topup/topup.pug
+    include ../../../widgets/Topup/topup.pug
