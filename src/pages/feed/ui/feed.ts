@@ -66,12 +66,11 @@ export class FeedPage {
 		let nopeListener = createButtonListener(false, tinderContainer, this);
 		  
 		let loveListener = async () => {
-			await createButtonListener(true, tinderContainer, this); // Обработка лайка
+			await createButtonListener(true, tinderContainer, this)(event); // Обработка лайка
 			await this.navbar.getUserInfo(); // Обновление информации о пользователе
-		};
+		  };
 		  
-		
-		 
+		  
 		
 		nope.addEventListener('click', nopeListener);
 		love.addEventListener('click', loveListener);
