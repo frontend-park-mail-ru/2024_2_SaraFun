@@ -1,7 +1,6 @@
 import { putLikeOrDislike } from '../api/putLikeOrDislike';
 import { openReportModal } from '../../../features/report';
 import { openNotificationModal } from './modal';
-import Navbar from '../../../widgets/Navbar/navbar';
 
 export function initCards(tinderContainer: HTMLElement, parent: any): void { 
     let newCards = document.querySelectorAll('.tinder__card:not(.removed)') as NodeListOf<HTMLElement>;
@@ -18,8 +17,6 @@ export function initCards(tinderContainer: HTMLElement, parent: any): void {
     }
 
     const maxOffsetIndex = 10;
-
-    const navbar = new Navbar(parent);
 
     newCards.forEach(function (card, index) {
         const limitedIndex = Math.min(index, maxOffsetIndex); 
@@ -117,7 +114,6 @@ export function initCards(tinderContainer: HTMLElement, parent: any): void {
             if ((response as string).trim() === 'у вас нет лайков') {
                 openNotificationModal(parent);
                 firstCard.style.transform = '';
-                await navbar.getUserInfo();
                 return;
             }
 
