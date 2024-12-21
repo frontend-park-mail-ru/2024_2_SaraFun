@@ -39,12 +39,12 @@ export async function updProfile(profileData: UserProfile, imagesNew: ImgData[],
     const response = await put('/api/personalities/updateprofile', data);
     
     if (!response.ok) {
-      console.error('Failed to update profile:', response.statusText);
+      //console.error('Failed to update profile:', response.statusText);
       return false; 
     }
     return true; 
   } catch (error) {
-    console.error('Error updating user profile:', error);
+    //console.error('Error updating user profile:', error);
     return false; 
   }
 }

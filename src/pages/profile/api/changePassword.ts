@@ -13,7 +13,7 @@ export async function saveNewPassword(oldPassword: string, newPassword: string) 
     notificationManager.addNotification('Пароль успешно изменен.', 'success');
     return true; 
   } catch (error) {
-    console.error('Ошибка при смене пароля:', error);
+    //console.error('Ошибка при смене пароля:', error);
     return false;
   }
 }

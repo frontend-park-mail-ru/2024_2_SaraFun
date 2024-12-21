@@ -15,7 +15,7 @@ export async function getFilteredChatPreviews(name: string): Promise<ChatPreview
 		return previews;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return [];
 	}
 }

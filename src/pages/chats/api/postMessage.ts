@@ -10,7 +10,7 @@ export async function postMessage(receiverId: number, message: string): Promise<
 		return true;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return false;
 	}
 }

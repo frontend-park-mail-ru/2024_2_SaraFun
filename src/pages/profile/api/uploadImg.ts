@@ -9,7 +9,7 @@ export async function uploadImg(imagesNew: ImgData[], imagesURLs: string[], imag
             formData.append('number', String(image.index + 1));
             const response = await postFormData('/api/uploadimage', formData);
             if (!response.ok) {
-              console.error('Failed to upload the image:', response.statusText);
+              //console.error('Failed to upload the image:', response.statusText);
               return false; 
             };
 
@@ -21,7 +21,7 @@ export async function uploadImg(imagesNew: ImgData[], imagesURLs: string[], imag
         return true;
     }
     catch(error) {
-        console.error('Error uploading the image:', error);
+        //console.error('Error uploading the image:', error);
         return false; 
     }
 };

@@ -13,23 +13,23 @@ export class WebSocketManager {
         this.startPing();
 
         this.socket.addEventListener('message', (event) => {
-            console.log('WebSocket send message:', event.data);
+            //console.log('WebSocket send message:', event.data);
             const info: WsMessage = JSON.parse(event.data);
-            console.log(this.handler);
-            console.log(info);
+            //console.log(this.handler);
+            //console.log(info);
             this.handler.handleMessage(info as WsMessage);
         });
 
         this.socket.addEventListener('open', () => {
-            console.log('WebSocket connection opened');
+            //console.log('WebSocket connection opened');
         });
 
         this.socket.addEventListener('close', () => {
-            console.log('WebSocket connection closed');
+            //console.log('WebSocket connection closed');
         });
 
         this.socket.addEventListener('error', (error) => {
-            console.error('WebSocket error:', error);
+            //console.error('WebSocket error:', error);
         });
     }
 

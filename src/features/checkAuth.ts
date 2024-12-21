@@ -12,7 +12,7 @@ export async function checkAuth(): Promise<boolean> {
 		return true;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return false;
 	}
 }

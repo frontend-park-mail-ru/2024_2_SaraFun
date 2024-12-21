@@ -30,6 +30,6 @@ if (root) {
     const app = new App(root);
     await app.init();
 } else {
-    console.error('Element with id "root" not found.');
+    //console.error('Element with id "root" not found.');
 }
 

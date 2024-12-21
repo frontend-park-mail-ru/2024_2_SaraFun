@@ -16,7 +16,7 @@ export async function getMatches(): Promise<User[]> {
 		return matches;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return [];
 	}
 }

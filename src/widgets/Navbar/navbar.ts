@@ -97,7 +97,7 @@ export default class Navbar {
 				<p>Купленные реакции: ${purchasedLikes}</p>`
 			;
 		} else {
-			console.log("Всплывающее окно не найдено.");
+			//console.log("Всплывающее окно не найдено.");
 		}
 	}
   

@@ -96,11 +96,11 @@ export default class App {
 			window.addEventListener('load', () => {
 			  navigator.serviceWorker.register('/sw.js')
 				.catch(error => {
-				  console.error('Service Worker registration failed:', error);
+				  //console.error('Service Worker registration failed:', error);
 				});
 			});
 		} else {
-			console.warn('Service workers are not supported in this browser.');
+			//console.warn('Service workers are not supported in this browser.');
 		}
 	}
 

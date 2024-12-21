@@ -18,7 +18,7 @@ export function openReportModal(userId: number): void {
       }
       notificationManager.addNotification('Жалоба успешно отправлена.', 'success');
     } catch (error) {
-      console.error(error);
+      //console.error(error);
       notificationManager.addNotification('Ошибка при отправке жалобы. Попробуйте позже.', 'fail');
     }
   }

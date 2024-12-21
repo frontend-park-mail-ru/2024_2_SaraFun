@@ -11,7 +11,7 @@ export async function getProfile(): Promise<UserProfile | null> {
     const response = await get('/api/personalities/profile');
     
     if (!response.ok) {
-      console.error('Failed to fetch profile:', response.statusText);
+      //console.error('Failed to fetch profile:', response.statusText);
       return null; 
     }
 
@@ -36,7 +36,7 @@ export async function getProfile(): Promise<UserProfile | null> {
     };
     return userProfile;
   } catch (error) {
-    console.error('Error fetching user profile:', error);
+    //console.error('Error fetching user profile:', error);
     return null; 
   }
 }

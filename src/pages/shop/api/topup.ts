@@ -12,7 +12,7 @@ export const topupApi = async (productPrice: number): Promise<boolean> => {
         }
         return true;
     } catch (error) {
-        console.error('Ошибка при создании платежа:', error);
+        //console.error('Ошибка при создании платежа:', error);
         return false;
     }
 }

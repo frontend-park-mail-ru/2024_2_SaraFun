@@ -8,7 +8,7 @@ export async function getChat(userId: number): Promise<Chat> {
 		return chat;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return null;
 	}
 }

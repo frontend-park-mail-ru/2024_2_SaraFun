@@ -7,7 +7,7 @@ export async function putLikeOrDislike(like: boolean, userID: number): Promise<s
 		return 'true';
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		if (error instanceof Error) {
             const errorMessage = error.message.split(', ').pop();
             return errorMessage;

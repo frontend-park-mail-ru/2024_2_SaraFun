@@ -11,7 +11,7 @@ export async function getChatPreviews(): Promise<ChatPreview[]> {
 		return previews;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return [];
 	}
 }

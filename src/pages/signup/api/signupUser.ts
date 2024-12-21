@@ -23,7 +23,7 @@ export async function signupUser(login: string, password: string, first_name: st
     return true;
 
   } catch (error) {
-    console.error(error);
+    //console.error(error);
     return false;
   }
 }

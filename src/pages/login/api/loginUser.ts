@@ -15,7 +15,7 @@ export async function loginUser(login: string, password: string): Promise<boolea
 		return true;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return false;
 	}
 }

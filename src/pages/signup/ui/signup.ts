@@ -127,7 +127,7 @@ export class RegistrationPage {
 						this.parent.navigateTo('/feed');
 					}
 				} catch (error) {
-					console.error(error);
+					//console.error(error);
 					notificationManager.addNotification('Ошибка при регистрации. Попробуйте ещё раз.', 'fail');
 				}
 			}

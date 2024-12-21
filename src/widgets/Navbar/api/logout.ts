@@ -12,7 +12,7 @@ export async function logout(): Promise<boolean> {
 		return true;
 
 	} catch (error) {
-		console.error(error);
+		//console.error(error);
 		return false;
 	}
 }
