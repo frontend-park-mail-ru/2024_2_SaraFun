@@ -117,7 +117,7 @@ export function initCards(tinderContainer: HTMLElement, parent: any): void {
             if ((response as string).trim() === 'у вас нет лайков') {
                 openNotificationModal(parent);
                 firstCard.style.transform = '';
-                navbar.getUserInfo();
+                await navbar.getUserInfo();
                 return;
             }
 
