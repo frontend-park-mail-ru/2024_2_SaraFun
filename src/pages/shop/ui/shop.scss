@@ -4,7 +4,8 @@
     flex-direction: column;
     gap: 20px;
     height: 92vh;
-    padding: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     width: 100%;
     overflow-y: auto;
 }
@@ -16,7 +17,6 @@
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    min-height: 90%;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
