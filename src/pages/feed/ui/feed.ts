@@ -65,9 +65,9 @@ export class FeedPage {
   
 		let nopeListener = createButtonListener(false, tinderContainer, this); 
 		
-		let loveListener = async () => {
-			await createButtonListener(true, tinderContainer, this); 
-			await this.navbar.getUserInfo(); 
+		let loveListener = () => {
+			createButtonListener(true, tinderContainer, this); 
+			this.navbar.getUserInfo(); 
 		};
 		 
 		
