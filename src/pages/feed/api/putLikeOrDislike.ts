@@ -1,8 +1,8 @@
 import { post } from '../../../shared/api/api';
 
-export async function putLikeOrDislike(like: boolean, userID: number): Promise<string> {
+export async function putLikeOrDislike(like: boolean, username: string): Promise<string> {
 	try {
-		const body = { 'receiver': userID, 'type': like };
+		const body = { 'receiver': username, 'type': like };
 		await post('/api/communications/reaction', body);
 		return 'true';
 

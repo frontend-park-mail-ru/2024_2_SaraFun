@@ -12,9 +12,9 @@ export function createButtonListener(love: boolean, tinderContainer: HTMLElement
         }
     
         let card = cards[0];
-        let userId = card.getAttribute('data-item-id');
+        let username = card.getAttribute('data-item-id');
 
-        let response = await putLikeOrDislike(love, parseInt(userId));
+        let response = await putLikeOrDislike(love, username);
         if ((response as string).trim() === 'у вас нет лайков') {
             openNotificationModal(parent);
             return;
